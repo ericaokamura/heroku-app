@@ -1,1 +1,1 @@
-web: heroku-gulliver-traveller-app web/
+web: heroku-php-apache2
