@@ -62,4 +62,9 @@
 
 .mapa {
     margin-top: 20px;
+    font-size: 16px;
+}
+
+.mapa_container {
+    margin-top: 50px;
 }
