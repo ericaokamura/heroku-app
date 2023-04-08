@@ -68,3 +68,12 @@
 .mapa_container {
     margin-top: 50px;
 }
+
+.btn-dark {
+    padding: 0px 20px;
+}
+
+.favorito {
+    width: 20px;
+    height: 20px;
+}
