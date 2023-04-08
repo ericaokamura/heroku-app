@@ -1,0 +1,57 @@
+/* Cores padrão: Azul #325098 - Amarelo #EBB63F - Branco #FAF9F7 */
+/* font-family: Copperplate, Arial, sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.page_content {
+    padding-left: 90px;
+    margin-top: 80px;
+    display: flex;
+}
+
+
+.container-filter {
+    border-radius: 10px;
+    background-color:#EBB63F;
+    text-align: center;
+}
+
+.filtro {
+    display: block;
+    width: 100%;
+}
+
+.row.filtro {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 12px;
+}
+
+.remy-img {
+    margin-top: 90px;
+    width: 300px;
+    height: 300px;
+}
+
+.button {
+    padding-bottom: 20px;
+}
+
+.div_calendar{
+    padding: 10px 40px;
+}
+
+.borda{
+    margin-left: 40px;
+}
+
+.select-tipo-suite {
+    font-family: Copperplate, Arial, sans-serif;
+}
