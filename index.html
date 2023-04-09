@@ -1,184 +1,185 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
-    <title>Gulliver Traveller</title>
-  </head>
-  <body>
-      <div>
-        <img class="image-logo" src="./images/logo.png" alt="Logo">
+<html lang='pt-br'>
+<head>
+  <meta charset='UTF-8'>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <link href='node_modules/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='style.css' rel='stylesheet'>
+  <title>Gulliver Traveller</title>
+</head>
+<body>
+
+<header class='container-fluid text-center my-5'>
+  <h1 aria-level='1' class='display-1' role='heading'>Gulliver</h1>
+</header>
+
+<div class='container-fluid'>
+  <div class='row'>
+
+    <aside class='col-sm-12 col-md-3 col-lg-3 bg'>
+      <div class='container-fluid'>
+        <form class='row g-3'>
+          <h3 class='mb-3'>Filter:</h3>
+          <div class='col-md-6'>
+            <label class='form-label' for='checkin-input'>Check-in:</label>
+            <input aria-label='Check-in date' class='form-control' id='checkin-input' name='checkin' required
+                   type='date'>
+          </div>
+          <div class='col-md-6'>
+            <label class='form-label' for='checkout-input'>Check-out:</label>
+            <input aria-label='Check-out date' class='form-control' id='checkout-input' name='checkout' required
+                   type='date'>
+          </div>
+          <div class='col-md-6'>
+            <label class='form-label' for='region-input'>Search region:</label>
+            <input class='form-control' id='region-input' name='region' placeholder='Search region' type='search'>
+          </div>
+          <div class='col-md-6'>
+            <label class='form-label' for='suite-select'>Suite type:</label>
+            <select class='form-select' id='suite-select' name='suite-select' required>
+              <option value='0'>Select an option</option>
+              <option value='1'>Class</option>
+              <option value='2'>Premium</option>
+              <option value='3'>Master</option>
+            </select>
+          </div>
+          <div class='col-md-6'>
+            <label class='form-label' for='price-range'>Daily price range:</label>
+            <input class='form-range' id='price-range' name='price-range' type='range'>
+          </div>
+          <div class='col-12'>
+            <button class='btn btn-dark' type='submit'>Search</button>
+          </div>
+        </form>
       </div>
-      <div class="container-fluid page_content">
-        <div class="col-md-3 col-sm-12 col-lg-3">
-          <div class="container-filter">
-            <div class="row filtro">
-                <h3>Filtrar:</h3>
-                <div class="row div_calendar">
-                  <label for="entrada">Check-in</label>
-                  <input type="date" id="entrada">
-                </div>
-                <div class="row div_calendar">
-                  <label for="saida">Check-out</label>
-                  <input type="date" id="saida">
-                </div>
-                <div class="row div_calendar">
-                  <label for="pesquisa">Pesquisar região</label>
-                  <input type="search" id="pesquisa" placeholder="Pesquise uma região">
-                </div>
 
-                <div class="row div_calendar">
-                  <label for="dormitório">Tipo de suíte:</label>
-                  <select class="select-tipo-suite" id="suite" required>
-                    <option value="0">Selecione uma opção</option>
-                    <option value="1">Class</option>
-                    <option value="2">Premium</option>
-                    <option value="3">Master</option>
-                  </select>
-                </div>
-
-                <div class="row div_calendar">
-                  <label for="value">Valor das diárias</label>
-                  <input type="range" id="value">
-                </div>
-            </div>
-            <div class="button">
-              <button type="button" class="btn-dark">Pesquisar</button>
-            </div>
-          </div>
-          <div class="mapa_container">
-            <h4 class="mapa">Selecione uma região no mapa</h4>
-            <iframe
-              width="380"
-              height="450"
-              style="border:0"
-              loading="lazy"
-              allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC7K0CfjjrLQ6kocgQ7pGT0S0DvLIdAM2I
-                &q=Space+Needle,Seattle+WA">
-            </iframe>
-          </div>
+      <div class='container-fluid mt-4'>
+        <label for='map'>Select a region on the map:</label>
+        <div class='embed-responsive embed-responsive-4by3'>
+          <iframe allowfullscreen
+                  height='300'
+                  id='map'
+                  loading='lazy'
+                  referrerpolicy='no-referrer-when-downgrade'
+                  src='https://www.google.com/maps/embed/v1/place?key=AIzaSyC7K0CfjjrLQ6kocgQ7pGT0S0DvLIdAM2I
+                &q=Space+Needle,Seattle+WA'
+                  title='Map showing a region'
+                  width='100%'>
+          </iframe>
         </div>
-        <div class="col-md-8 col-sm-12 col-lg-8 borda">
-          <div class="row">
-            <div class="col-12">
+      </div>
+    </aside>
 
-              <div class="card mb-3 shadow p-3 mb-5 bg-body rounded">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="./images/hotel_pullman.jpg" class="img-fluid rounded-start" alt="Hotel Gerando">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Hotel Pullman Paris Tour Eiffel</h5>
-                      <p class="card-text">O Pullman Paris Tour Eiffel, de 4 estrelas, está localizado perto da Torre
-                        Eiffel e
-                        da zona de Trocadero. A sala de fitness está aberta 24 horas por dia e disponibiliza equipamento
-                        cardiovascular.</p>
-                      <p class="card-text"><small class="text-muted">4,3 km do centro</small></p>
-                      <img class="favorito" src="./images/heart.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              <div class="card mb-3 shadow p-3 mb-5 bg-body rounded">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="./images/hotel_rosalie.jpg" class="img-fluid rounded-start" alt="Hotel Rosalie">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Hôtel Rosalie</h5>
-                      <p class="card-text">Localizado no bairro de Gobelins, o hotel design, recentemente renovado em
-                        2022,
-                        dispõe de um terraço dúplex e um terraço privado com sombra no último piso, para usufruto dos
-                        hóspedes.</p>
-                      <p class="card-text"><small class="text-muted">2,7 km do centro</small></p>
-                      <img class="favorito" src="./images/heart.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <main class='col-12 col-md-9 col-lg-9'>
 
-              <div class="card mb-3 shadow p-3 mb-5 bg-body rounded">
-                <!--style="max-width: 540px;"-->
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="./images/hotel_lempire.jpg" class="img-fluid rounded-start" alt="Hotel L'Empire Paris">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">L'Empire Paris</h5>
-                      <p class="card-text">Localizado a 300 metros do Museu do Louvre e a 20 metros das lojas da Rue de
-                        Rivoli
-                        (rua), o L'Empire Paris apresenta quartos climatizados com uma televisão LCD por satélite e acesso
-                        Wi-Fi gratuito.</p>
-                      <p class="card-text"><small class="text-muted">0,8 km do centro</small></p>
-                      <img class="favorito" src="./images/heart2.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-3 shadow p-3 mb-5 bg-body rounded">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="./images/hotel_pavillon.jpg" class="img-fluid rounded-start" alt="Pavillon Monceau">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Pavillon Monceau</h5>
-                      <p class="card-text">O Pavillon Monceau dispõe de acomodações em Paris, a 1,7 km dos Campos Elísios
-                        e do
-                        Arco do Triunfo. O Pavillon Monceau proporciona cortesia e charme no coração da cidade.</p>
-                      <p class="card-text"><small class="text-muted">2,7 km do centro</small></p>
-                      <img class="favorito" src="./images/heart.png">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card mb-3 shadow p-3 mb-5 bg-body rounded">
-                <div class="row g-0">
-                  <div class="col-md-4">
-                    <img src="./images/hotel_chateau.jpg" class="img-fluid rounded-start" alt="Hotel Chateau Frontenac">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Hotel Chateau Frontenac</h5>
-                      <p class="card-text">O Chateau Frontenac está localizado em Paris, a 250 metros da Avenida dos
-                        Campos
-                        Elísios e a 800 metros do Arco do Triunfo.</p>
-                      <p class="card-text"><small class="text-muted">4,6 km do centro</small></p>
-                      <img class="favorito" src="./images/heart2.png">
-
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div class='card mb-3 shadow bg-body rounded'>
+        <div class='row g-0'>
+          <div class='col-md-4'>
+            <img alt='Hotel Gerando' class='img-fluid rounded-start' src='./images/hotel_pullman.jpg'>
+          </div>
+          <div class='col-md-8'>
+            <div class='card-body'>
+              <h3 class='card-title'>Hotel Pullman Paris Tour Eiffel</h3>
+              <p class='card-text'>O Pullman Paris Tour Eiffel, de 4 estrelas, está localizado perto da Torre Eiffel e
+                da zona de Trocadero. A sala de fitness está aberta 24 horas por dia e disponibiliza equipamento
+                cardiovascular.</p>
+              <p class='card-text'><small class='text-muted'>4,3 km do centro</small></p>
+              <button class='btn btn-link p-0 mb-2'>
+                <img alt='Adicionar aos favoritos' class='btn-favorite' src='./images/heart.png'>
+                Adicionar aos favoritos
+              </button>
             </div>
           </div>
         </div>
       </div>
-  <body>  
-<html>    
+
+      <div class='card mb-3 shadow bg-body rounded'>
+        <div class='row g-0'>
+          <div class='col-md-4'>
+            <img alt='Hotel Gerando' class='img-fluid rounded-start' src='./images/hotel_pullman.jpg'>
+          </div>
+          <div class='col-md-8'>
+            <div class='card-body'>
+              <h3 class='card-title'>Hôtel Rosalie</h3>
+              <p class='card-text'>Localizado no bairro de Gobelins, o hotel design, recentemente renovado em
+                2022, dispõe de um terraço dúplex e um terraço privado com sombra no último piso, para usufruto dos
+                hóspedes.</p>
+              <p class='card-text'><small class='text-muted'>2,7 km do centro</small></p>
+              <button class='btn btn-link p-0 mb-2'>
+                <img alt='Adicionar aos favoritos' class='btn-favorite' src='./images/heart.png'>
+                Adicionar aos favoritos
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='card mb-3 shadow bg-body rounded'>
+        <div class='row g-0'>
+          <div class='col-md-4'>
+            <img alt='Hotel Gerando' class='img-fluid rounded-start' src='./images/hotel_pullman.jpg'>
+          </div>
+          <div class='col-md-8'>
+            <div class='card-body'>
+              <h3 class='card-title'>L'Empire Paris</h3>
+              <p class='card-text'>Localizado a 300 metros do Museu do Louvre e a 20 metros das lojas da Rue de
+                Rivoli (rua), o L'Empire Paris apresenta quartos climatizados com uma televisão LCD por satélite e
+                acesso Wi-Fi gratuito.</p>
+              <p class='card-text'><small class='text-muted'>0,8 km do centro</small></p>
+              <button class='btn btn-link p-0 mb-2'>
+                <img alt='Adicionar aos favoritos' class='btn-favorite' src='./images/heart.png'>
+                Adicionar aos favoritos
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='card mb-3 shadow bg-body rounded'>
+        <div class='row g-0'>
+          <div class='col-md-4'>
+            <img alt='Hotel Gerando' class='img-fluid rounded-start' src='./images/hotel_pullman.jpg'>
+          </div>
+          <div class='col-md-8'>
+            <div class='card-body'>
+              <h3 class='card-title'>Pavillon Monceau</h3>
+              <p class='card-text'>O Pavillon Monceau dispõe de acomodações em Paris, a 1,7 km dos Campos Elísios
+                e do Arco do Triunfo. O Pavillon Monceau proporciona cortesia e charme no coração da cidade.</p>
+              <p class='card-text'><small class='text-muted'>2,7 km do centro</small></p>
+              <button class='btn btn-link p-0 mb-2'>
+                <img alt='Adicionar aos favoritos' class='btn-favorite' src='./images/heart.png'>
+                Adicionar aos favoritos
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='card mb-3 shadow bg-body rounded'>
+        <div class='row g-0'>
+          <div class='col-md-4'>
+            <img alt='Hotel Gerando' class='img-fluid rounded-start' src='./images/hotel_pullman.jpg'>
+          </div>
+          <div class='col-md-8'>
+            <div class='card-body'>
+              <h3 class='card-title'>Hotel Chateau Frontenac</h3>
+              <p class='card-text'>O Chateau Frontenac está localizado em Paris, a 250 metros da Avenida dos
+                Campos Elísios e a 800 metros do Arco do Triunfo.</p>
+              <p class='card-text'><small class='text-muted'>4,6 km do centro</small></p>
+              <button class='btn btn-link p-0 mb-2'>
+                <img alt='Adicionar aos favoritos' class='btn-favorite' src='./images/heart.png'>
+                Adicionar aos favoritos
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+</div>
+<script src='node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
+</body>
+</html>
