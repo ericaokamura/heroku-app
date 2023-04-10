@@ -34,6 +34,9 @@ function getLocation() {
     },
     (error) => {
       console.error(error);
+      const defaultLocation = 'New York, NY, USA';
+      locationInput.value = defaultLocation;
+      updateMap(defaultLocation);
     }
   );
 }
