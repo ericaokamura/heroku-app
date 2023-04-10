@@ -64,21 +64,21 @@
           </div>
           <div class='col-md-6'>
             <label class='form-label text-dark' for='region-input'>Localidade:</label>
-            <input class='form-control' id='region-input' name='region' placeholder='Onde você quer ficar?'
+            <input class='form-control' id='region-input' name='region' placeholder='Para onde vamos?'
                    type='search'>
           </div>
           <div class='col-md-6'>
-            <label class='form-label text-dark' for='suite-select'>Tipo de hospedagem:</label>
-            <select class='form-select' id='suite-select' name='suite-select' required>
-              <option value='0'>Escolha um tipo</option>
-              <option value='1'>Apartamento</option>
-              <option value='2'>Casa</option>
-              <option value='3'>Quarto</option>
+            <label class='form-label text-dark' for='amount-of-people-select'>Quantas pessoas?</label>
+            <select class='form-select' id='amount-of-people-select' name='amount-of-people-select' required>
+              <option value='0'>1</option>
+              <option value='1'>2</option>
+              <option value='2'>3</option>
+              <option value='3'>4</option>
             </select>
           </div>
           <div class='col-12'>
             <div class='d-flex justify-content-center'>
-              <button class='btn btn-primary w-100' type='submit'>Pesquisar</button>
+              <button class='btn btn-primary w-100' id='search-button' type='submit'>Pesquisar</button>
             </div>
           </div>
         </form>
@@ -93,8 +93,7 @@
                   id='map'
                   loading='lazy'
                   referrerpolicy='no-referrer-when-downgrade'
-                  src='https://www.google.com/maps/embed/v1/place?key=AIzaSyC7K0CfjjrLQ6kocgQ7pGT0S0DvLIdAM2I
-                &q=Space+Needle,Seattle+WA'
+                  src=''
                   title='Map showing a region'
                   width='100%'>
           </iframe>
@@ -312,6 +311,7 @@
     </div>
   </div>
 </footer>
+<script src='pesquisar.js'></script>
 <script src='../node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
 </body>
 </html>
