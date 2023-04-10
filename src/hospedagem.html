@@ -48,7 +48,7 @@
 
     <aside class='col-sm-12 col-md-4 col-lg-4'>
       <div class='container-fluid'>
-        <form class='row g-3 bg-light py-5 px-3 rounded-3 mt-1'>
+        <form class='row g-3 bg-light py-5 px-3 rounded-3 mt-1 shadow-sm'>
           <h3 class='mb-3 text-dark'>Pesquisar</h3>
           <div class='col-md-6'>
             <label class='form-label text-dark' for='checkin-input'>Check-in:</label>
@@ -86,6 +86,7 @@
         <label for='map'>Selecione uma região no mapa:</label>
         <div class='embed-responsive embed-responsive-4by3'>
           <iframe allowfullscreen
+                  class='shadow-sm'
                   height='300'
                   id='map'
                   loading='lazy'
@@ -100,39 +101,46 @@
     </aside>
 
     <main class='col-12 col-md-4 col-lg-8'>
-      <section class='row'>
-        <article class='col-md-6 col-lg-8 mb-4'>
-          <figure class='card bg-dark text-white'>
+      <div class='row'>
+        <div class='col-md-8 mb-4'>
+          <div class='card shadow-sm'>
             <img alt='Piscina ao ar livre' class='card-img img-fluid' src='../assets/images/hotel_pavillon.jpg'>
-            <figcaption aria-label='Piscina ao ar livre' class='card-img-overlay d-flex align-items-end'>
-              <h2 class='card-title'>Piscina ao ar livre</h2>
-            </figcaption>
-          </figure>
-        </article>
-        <article class='col-md-6 col-lg-4 mb-4'>
-          <div class='row'>
-            <div class='col-12 col-md-12'>
-              <figure class='card bg-dark text-white'>
-                <img alt='Restaurante com vista panorâmica' class='card-img img-fluid'
-                     src='../assets/images/hotel_pavillon.jpg'>
-                <figcaption aria-label='Restaurante com vista panorâmica'
-                            class='card-img-overlay d-flex align-items-end'>
-                  <h2 class='card-title'>Restaurante com vista panorâmica</h2>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='col-12 col-md-12'>
-              <figure class='card bg-dark text-white'>
-                <img alt='Sala de ginástica equipada' class='card-img img-fluid'
-                     src='../assets/images/hotel_pavillon.jpg'>
-                <figcaption aria-label='Sala de ginástica equipada' class='card-img-overlay d-flex align-items-end'>
-                  <h2 class='card-title'>Sala de ginástica equipada</h2>
-                </figcaption>
-              </figure>
+            <div class='card-img-overlay d-flex align-items-end'>
+              <h2 class='card-title text-white'>Piscina ao ar livre</h2>
             </div>
           </div>
-        </article>
-      </section>
+        </div>
+        <div class='col-md-4 mb-4'>
+          <div class='card-deck h-100'>
+            <div class='card shadow-sm mb-3'>
+              <img alt='Restaurante com vista panorâmica' class='card-img img-fluid'
+                   src='../assets/images/hotel_pavillon.jpg'>
+              <div class='card-img-overlay d-flex align-items-end'>
+                <h2 class='card-title text-white'>Restaurante com vista panorâmica</h2>
+              </div>
+            </div>
+            <div class='card shadow-sm'>
+              <img alt='Sala de ginástica equipada' class='card-img img-fluid'
+                   src='../assets/images/hotel_pavillon.jpg'>
+              <div class='card-img-overlay d-flex align-items-end'>
+                <h2 class='card-title text-white'>Sala de ginástica equipada</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='col-lg-12 mb-4'>
+          <div class='card shadow-sm'>
+            <div class='card-body'>
+              <h2 class='card-title'>Hotel</h2>
+              <ul class='list-group list-group-flush'>
+                <li class='list-group-item'>Endereço: Praça da República - República - São Paulo - SP, 14786-079</li>
+                <li class='list-group-item'>Contato: <a class='text-dark' href='tel:+551140028922'>+55 11 4002-8922</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </section>
