@@ -3,7 +3,7 @@ Este é um projeto desenvolvido para a [FIAP](https://www.fiap.com.br/) (Faculda
 
 O projeto utiliza a API do [Google Maps](https://developers.google.com/maps?hl=pt-br) e [Big Data Cloud](https://api.bigdatacloud.net/data/reverse-geocode-client) para obter informações de geolocalização e conta com uma interface amigável para o usuário.
 
-Confira a hospedagem do projeto no [Heroku](https://heroku-gulliver-traveller-app.herokuapp.com).
+Confira a hospedagem do projeto no [Heroku](https://heroku-gulliver-traveller-app.herokuapp.com/src).
 
 ## Funcionalidades
 - Busca de hotéis por localização, data de check-in e check-out, data e número de hóspedes.
