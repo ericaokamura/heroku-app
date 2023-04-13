@@ -3,7 +3,6 @@ const startingDateInput = document.getElementById('checkin-input');
 const returningDateInput = document.getElementById('checkout-input');
 const mapIFrame = document.getElementById('map');
 const searchButton = document.querySelector('#search-button');
-
 const apiKey = 'AIzaSyC7K0CfjjrLQ6kocgQ7pGT0S0DvLIdAM2I';
 const geolocationApiUrl =
   'https://api.bigdatacloud.net/data/reverse-geocode-client';

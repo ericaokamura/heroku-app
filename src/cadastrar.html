@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+  <meta charset='UTF-8'>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+  <link href='../node_modules/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet'>
+  <title>Gulliver Traveller - Cadastrar</title>
+</head>
+<body>
+<header class='container mb-5'>
+  <nav class='navbar navbar-expand-lg navbar-light bg-white'>
+    <div class='container'>
+      <a class='navbar-brand' href='./index.html'>
+        Gulliver Traveller
+      </a>
+      <button aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler'
+              data-bs-target='#navbarNav' data-bs-toggle='collapse' type='button'>
+        <span class='navbar-toggler-icon'></span>
+      </button>
+      <div class='collapse navbar-collapse justify-content-end' id='navbarNav'>
+        <ul class='navbar-nav'>
+          <li class='nav-item'>
+            <a class='nav-link text-dark' href='#'>Acomodações</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link text-dark' href='#'>Experiências</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link text-dark' href='#'>Blog</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link text-dark' href='#'>Ajuda</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link text-dark' href='./cadastrar.html'>Cadastrar-se</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link text-dark' href='./entrar.html'>Entrar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<section class='container mb-5'>
+  <main class='container'>
+    <div class='row justify-content-center'>
+      <div class='col-md-8 col-lg-6'>
+        <div class='card p-4 shadow'>
+          <h2 class='mb-4 text-center'>Crie sua conta</h2>
+          <form>
+            <div class='row'>
+              <div class='col-sm-6 mb-3'>
+                <label class='form-label' for='first-name-input'>Nome</label>
+                <input class='form-control' id='first-name-input' name='first-name' required type='text'>
+              </div>
+              <div class='col-sm-6 mb-3'>
+                <label class='form-label' for='last-name-input'>Sobrenome</label>
+                <input class='form-control' id='last-name-input' name='last-name' required type='text'>
+              </div>
+            </div>
+            <div class='form-group mb-3'>
+              <label class='form-label' for='email-input'>Endereço de e-mail</label>
+              <input aria-describedby='email-description' class='form-control' id='email-input' name='email'
+                     pattern='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' required type='email'>
+              <small class='form-text text-muted' id='email-description'>Usaremos seu e-mail para comunicações
+                importantes sobre sua conta e reservas.</small>
+            </div>
+            <div class='form-group mb-3'>
+              <label class='form-label' for='password-input'>Senha</label>
+              <input aria-describedby='password-description' class='form-control' id='password-input' name='password'
+                     pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$' required type='password'>
+              <small class='form-text text-muted' id='password-description'>A senha deve ter no mínimo 8 caracteres,
+                incluindo ao menos uma letra minúscula, uma letra maiúscula e um número.</small>
+            </div>
+            <div class='form-group mb-3'>
+              <label class='form-label' for='confirm-password-input'>Confirmar senha</label>
+              <input class='form-control' id='confirm-password-input' name='confirm-password' required type='password'>
+            </div>
+            <div class='form-check mb-3'>
+              <input class='form-check-input' id='agree-terms-input' name='agree-terms' required type='checkbox'>
+              <label class='form-check-label' for='agree-terms-input'>Eu li e concordo com os <a
+                class='text-decoration-none'
+                href='#'>termos
+                de serviço</a> e a <a class='text-decoration-none' href='#'>política de privacidade</a> do
+                Gulliver Traveller.</label>
+            </div>
+            <button class='btn btn-primary w-100' type='submit'>Criar conta</button>
+          </form>
+          <div class='mt-4 text-center'>
+            <p class='mb-0'>Já tem uma conta? <a class='text-decoration-none' href='./entrar.html'>Entre</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+<footer class='footer pt-5'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-3'>
+        <h5 class='font-weight-bold'>Gulliver Traveller</h5>
+      </div>
+      <div class='col-md-2'>
+        <h5 class='mb-4 font-weight-bold'>Sobre</h5>
+        <ul class='list-unstyled'>
+          <li><a class='text-dark nav-link' href='#'>Como funciona o Gulliver</a></li>
+          <li><a class='text-dark nav-link' href='#'>Notícias</a></li>
+          <li><a class='text-dark nav-link' href='#'>Investidores</a></li>
+          <li><a class='text-dark nav-link' href='#'>Gulliver Plus</a></li>
+          <li><a class='text-dark nav-link' href='#'>Gulliver Luxe</a></li>
+          <li><a class='text-dark nav-link' href='#'>HotelTonight</a></li>
+          <li><a class='text-dark nav-link' href='#'>Gulliver for Work</a></li>
+          <li><a class='text-dark nav-link' href='#'>Oportunidades de trabalho</a></li>
+        </ul>
+      </div>
+      <div class='col-md-2'>
+        <h5 class='mb-4 font-weight-bold'>Comunidade</h5>
+        <ul class='list-unstyled'>
+          <li><a class='text-dark nav-link' href='#'>Diversidade e pertencimento</a></li>
+          <li><a class='text-dark nav-link' href='#'>Acessibilidade</a></li>
+          <li><a class='text-dark nav-link' href='#'>Gulliver Associates</a></li>
+          <li><a class='text-dark nav-link' href='#'>Convidar amigos</a></li>
+          <li><a class='text-dark nav-link' href='#'>Gulliver Magazine</a></li>
+        </ul>
+      </div>
+      <div class='col-md-2'>
+        <h5 class='mb-4 font-weight-bold'>Hospede uma casa</h5>
+        <ul class='list-unstyled'>
+          <li><a class='text-dark nav-link' href='#'>Hospede uma casa</a></li>
+          <li><a class='text-dark nav-link' href='#'>Hospede uma experiência</a></li>
+          <li><a class='text-dark nav-link' href='#'>Responda aos pedidos de reserva</a></li>
+          <li><a class='text-dark nav-link' href='#'>Hospedando com responsabilidade</a></li>
+          <li><a class='text-dark nav-link' href='#'>Centro de recursos</a></li>
+          <li><a class='text-dark nav-link' href='#'>Hospedagem temporária</a></li>
+        </ul>
+      </div>
+      <div class='col-md-3'>
+        <h5 class='mb-4 font-weight-bold'>Suporte</h5>
+        <ul class='list-unstyled'>
+          <li><a class='text-dark nav-link' href='#'>Nossas políticas</a></li>
+          <li><a class='text-dark nav-link' href='#'>Termos e privacidade</a></li>
+          <li><a class='text-dark nav-link' href='#'>Ajuda</a></li>
+          <li><a class='text-dark nav-link' href='#'>Soluções para casos especiais</a></li>
+          <li><a class='text-dark nav-link' href='#'>Segurança</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class='row'>
+      <div class='col-md-8'>
+        <ul class='list-inline small'>
+          <li class='list-inline-item'><a class='text-dark nav-link' href='#'>© 2023 Gulliver, Inc.</a></li>
+          <li class='list-inline-item'><a class='text-dark nav-link' href='#'>Privacidade</a></li>
+          <li class='list-inline-item'><a class='text-dark nav-link' href='#'>Termos</a></li>
+          <li class='list-inline-item'><a class='text-dark nav-link' href='#'>Mapa do site</a></li>
+        </ul>
+      </div>
+      <div class='col-md-4'>
+        <ul class='list-inline text-md-right small'>
+          <li class='list-inline-item'><a class='text-dark nav-link' href='#'>Português (BR)</a></li>
+          <li class='list-inline-item'><a class='text-dark nav-link' href='#'>R$</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src='pesquisar.js'></script>
+<script src='../node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
+</body>
+</html>
