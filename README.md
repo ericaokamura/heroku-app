@@ -6,7 +6,7 @@ O projeto utiliza a API do [Google Maps](https://developers.google.com/maps?hl=p
 Confira a hospedagem do projeto no [Heroku](https://heroku-gulliver-traveller-app.herokuapp.com/src).
 
 ## Funcionalidades
-- Busca de hotéis por localização, data de check-in e check-out, data e número de hóspedes.
+- Busca de hotéis por localização, data de check-in e check-out, data e número de hóspedes.  
 
 ## Como utilizar
 1. Clone o repositório: git clone https://github.com/ericaokamura/heroku-app.git
@@ -17,5 +17,10 @@ Confira a hospedagem do projeto no [Heroku](https://heroku-gulliver-traveller-ap
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Bootstrap](https://getbootstrap.com/) - Framework CSS.
+
+
+
+
+
 
 
