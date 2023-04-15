@@ -17,3 +17,5 @@ Confira a hospedagem do projeto no [Heroku](https://heroku-gulliver-traveller-ap
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Bootstrap](https://getbootstrap.com/) - Framework CSS.
+
+
